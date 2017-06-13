@@ -92,8 +92,8 @@ public class Monk extends Mob {
 			Hero hero = Dungeon.hero;
 			KindOfWeapon weapon = hero.belongings.weapon;
 			
-			if (weapon != null && !(weapon instanceof Knuckles) && !weapon.cursed) {
-				if (hitsToDisarm == 0) hitsToDisarm = Random.NormalIntRange(4, 8);
+			if (weapon != null && !(weapon instanceof Knuckles)) {
+				if (hitsToDisarm == 0) hitsToDisarm = Random.NormalIntRange(4, 11);
 
 				if (--hitsToDisarm == 0) {
 					hero.belongings.weapon = null;
