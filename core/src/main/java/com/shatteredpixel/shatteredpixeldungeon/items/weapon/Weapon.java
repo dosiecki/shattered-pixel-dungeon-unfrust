@@ -216,8 +216,8 @@ abstract public class Weapon extends KindOfWeapon {
 	@Override
 	public Item random() {
 		float roll = Random.Float();
-		if (roll < 0.3f){
-			//30% chance to be level 0 and cursed
+		if (roll < 0.25f){
+			//25% chance to be level 0 and cursed
 			enchant(Enchantment.randomCurse());
 			cursed = true;
 			return this;
@@ -279,7 +279,7 @@ abstract public class Weapon extends KindOfWeapon {
 		private static final float[] chances= new float[]{
 			10, 10, 10, 10,
 			5, 5, 5, 5, 5, 5,
-			2, 2, 2 };
+			3, 3, 3 };
 
 		private static final Class<?>[] curses = new Class<?>[]{
 				Annoying.class, Displacing.class, Exhausting.class, Fragile.class, Sacrificial.class, Wayward.class
