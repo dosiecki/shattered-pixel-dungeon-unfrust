@@ -76,7 +76,7 @@ public class Thief extends Mob {
 
 	@Override
 	public float speed() {
-		if (item != null) return (5*super.speed())/6;
+		if (item != null) return (3*super.speed())/4;
 		else return super.speed();
 	}
 
@@ -140,6 +140,8 @@ public class Thief extends Mob {
 	}
 
 	protected boolean steal( Hero hero ) {
+
+        if (Random.Float() < 0.6f) return false;
 
 		Item item = hero.belongings.randomUnequipped();
 
