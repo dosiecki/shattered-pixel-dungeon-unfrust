@@ -1211,6 +1211,8 @@ public class Hero extends Char {
                     HT += Random.NormalIntRange(7, 9);
                     HP += Random.NormalIntRange(7, 9);
                 }
+                if (HP > HT) HP = HT;
+                HP += ((int) ((HT-HP) * Random.Float(0.4f, 0.6f)));
 
 				attackSkill++;
 				defenseSkill++;
