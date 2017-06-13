@@ -54,7 +54,7 @@ import java.util.ArrayList;
 
 public abstract class Wand extends Item {
 
-	private static final int USAGES_TO_KNOW    = 20;
+	private static final int USAGES_TO_KNOW    = 17;
 
 	public static final String AC_ZAP	= "ZAP";
 
@@ -277,7 +277,7 @@ public abstract class Wand extends Item {
 		}
 
 		upgrade(n);
-		if (Random.Float() < 0.3f) {
+		if (Random.Float() < 0.25f) {
 			cursed = true;
 			cursedKnown = false;
 		}
@@ -393,7 +393,7 @@ public abstract class Wand extends Item {
 	public class Charger extends Buff {
 		
 		private static final float BASE_CHARGE_DELAY = 10f;
-		private static final float SCALING_CHARGE_ADDITION = 40f;
+		private static final float SCALING_CHARGE_ADDITION = 37f;
 		private static final float NORMAL_SCALE_FACTOR = 0.875f;
 
 		private static final float CHARGE_BUFF_BONUS = 0.25f;
