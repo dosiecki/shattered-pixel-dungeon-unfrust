@@ -169,7 +169,7 @@ public class Generator {
 		RING	( 15,	Ring.class ),
 		ARTIFACT( 15,   Artifact.class),
 		SEED	( 50,	Plant.Seed.class ),
-		FOOD	( 0,	Food.class ),
+		FOOD	( 10,	Food.class ),
 		GOLD	( 500,	Gold.class );
 		
 		public Class<?>[] classes;
@@ -225,7 +225,7 @@ public class Generator {
 			ScrollOfMagicalInfusion.class,
 			ScrollOfPsionicBlast.class,
 			ScrollOfMirrorImage.class };
-		Category.SCROLL.probs = new float[]{ 30, 10, 20, 0, 15, 15, 12, 8, 8, 0, 4, 10 };
+		Category.SCROLL.probs = new float[]{ 36, 10, 20, 0, 15, 15, 8, 8, 8, 0, 4, 8 };
 		
 		Category.POTION.classes = new Class<?>[]{
 			PotionOfHealing.class,
@@ -240,7 +240,7 @@ public class Generator {
 			PotionOfInvisibility.class,
 			PotionOfMight.class,
 			PotionOfFrost.class };
-		Category.POTION.probs = new float[]{ 45, 4, 15, 10, 15, 10, 0, 20, 12, 10, 0, 10 };
+		Category.POTION.probs = new float[]{ 45, 5, 5, 4, 15, 10, 0, 20, 12, 10, 0, 10 };
 
 		//TODO: add last ones when implemented
 		Category.WAND.classes = new Class<?>[]{
@@ -257,7 +257,7 @@ public class Generator {
 			WandOfTransfusion.class,
 			WandOfCorruption.class,
 			WandOfRegrowth.class };
-		Category.WAND.probs = new float[]{ 5, 4, 4, 4, 4, 3, /*3,*/ 3, 3, /*3,*/ 3, 3, 3 };
+		Category.WAND.probs = new float[]{ 5, 4, 4, 4, 3, 3, /*3,*/ 3, 3, /*3,*/ 2, 2, 2 };
 
 		//see generator.randomWeapon
 		Category.WEAPON.classes = new Class<?>[]{};
@@ -328,7 +328,7 @@ public class Generator {
 			Food.class,
 			Pasty.class,
 			MysteryMeat.class };
-		Category.FOOD.probs = new float[]{ 4, 1, 0 };
+		Category.FOOD.probs = new float[]{ 5, 3, 0 };
 			
 		Category.RING.classes = new Class<?>[]{
 			RingOfAccuracy.class,
@@ -374,7 +374,7 @@ public class Generator {
 			Dreamfoil.Seed.class,
 			Stormvine.Seed.class,
 			Starflower.Seed.class};
-		Category.SEED.probs = new float[]{ 12, 12, 12, 12, 12, 12, 12, 0, 4, 12, 12, 1 };
+		Category.SEED.probs = new float[]{ 12, 12, 12, 12, 12, 12, 12, 0, 4, 12, 12, 2 };
 	}
 	
 	public static void reset() {
