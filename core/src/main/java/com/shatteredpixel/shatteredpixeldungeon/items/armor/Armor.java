@@ -330,8 +330,8 @@ public class Armor extends EquipableItem {
 	@Override
 	public Item random() {
 		float roll = Random.Float();
-		if (roll < 0.3f){
-			//30% chance to be level 0 and cursed
+		if (roll < 0.25f){
+			//25% chance to be level 0 and cursed
 			inscribe(Glyph.randomCurse());
 			cursed = true;
 			return this;
@@ -428,8 +428,8 @@ public class Armor extends EquipableItem {
 				Affection.class, AntiMagic.class, Thorns.class };
 		private static final float[] chances= new float[]{
 				10, 10, 10, 10,
-				5, 5, 5, 5, 5, 5,
-				2, 2, 2 };
+				7, 7, 3, 7, 7, 10,
+				2, 7, 5 };
 
 		private static final Class<?>[] curses = new Class<?>[]{
 				AntiEntropy.class, Corrosion.class, Displacement.class, Metabolism.class, Multiplicity.class, Stench.class
