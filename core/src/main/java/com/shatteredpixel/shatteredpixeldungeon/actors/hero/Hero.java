@@ -1026,8 +1026,9 @@ public class Hero extends Char {
 			return false;
 
 		if (rooted) {
-			Camera.main.shake( 1, 1f );
-			return false;
+			Camera.main.shake( 1, 0.4f );
+            spend(1);
+			return true;
 		}
 		
 		int step = -1;
