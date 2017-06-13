@@ -1204,8 +1204,14 @@ public class Hero extends Char {
 				lvl++;
 				levelUp = true;
 
-				HT += 5;
-				HP += 5;
+                if (heroClass == HeroClass.WARRIOR) {
+                    HT += Random.NormalIntRange(11, 13);
+                    HP += Random.NormalIntRange(11, 13);
+                } else {
+                    HT += Random.NormalIntRange(7, 9);
+                    HP += Random.NormalIntRange(7, 9);
+                }
+
 				attackSkill++;
 				defenseSkill++;
 
