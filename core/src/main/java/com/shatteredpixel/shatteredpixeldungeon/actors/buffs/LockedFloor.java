@@ -29,7 +29,7 @@ import com.watabou.utils.Bundle;
 public class LockedFloor extends Buff {
 
 	//the amount of turns remaining before beneficial passive effects turn off
-	private float left = 50; //starts at 50 turns
+	private float left = 75; //starts at 75 turns
 
 	@Override
 	public boolean act() {
