@@ -45,6 +45,7 @@ public class Scorpio extends Mob {
 		HP = HT = 95;
 		defenseSkill = 24;
 		viewDistance = Light.DISTANCE;
+		baseSpeed = 0.9f;
 		
 		EXP = 14;
 		maxLvl = 25;
