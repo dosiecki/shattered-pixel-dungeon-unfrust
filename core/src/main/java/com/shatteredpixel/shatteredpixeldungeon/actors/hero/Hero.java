@@ -1208,8 +1208,8 @@ public class Hero extends Char {
                     HT += Random.NormalIntRange(7, 13);
                     HP += Random.NormalIntRange(7, 13);
                 } else {
-                    HT += Random.NormalIntRange(5, 9);
-                    HP += Random.NormalIntRange(5, 9);
+                    HT += Random.NormalIntRange(5, 11);
+                    HP += Random.NormalIntRange(5, 11);
                 }
                 if (HP > HT) HP = HT;
                 HP += ((int) ((HT-HP) * Random.Float(0.4f, 0.6f)));
