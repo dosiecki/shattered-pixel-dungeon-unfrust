@@ -1246,7 +1246,7 @@ public class Hero extends Char {
 	
 	void updateAwareness() {
 		awareness = (float)(1 - Math.pow(
-			(heroClass == HeroClass.ROGUE ? 0.85 : 0.90),
+			(heroClass == HeroClass.ROGUE ? 0.82 : 0.90),
 			(1 + Math.min( lvl,  9 )) * 0.5
 		));
 	}
