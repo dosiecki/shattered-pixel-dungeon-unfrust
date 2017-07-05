@@ -338,6 +338,17 @@ public class Hero extends Char {
 			}
 		}
 		if (dmg < 0) dmg = 0;
+        if (heroClass == HeroClass.ROGUE) {
+            Char enemy = this.enemy();
+            if (enemy instanceof Mob && ((Mob) enemy).surprisedBy(this)) {
+                if (subClass == HeroSubClass.ASSASSIN) {
+                    dmg *= 1.7f;
+                } else {
+                    dmg *= 1.2f;
+                }
+                dmg += Random.NormalIntRange(1, 5);
+            }
+        }
 		if (subClass == HeroSubClass.BERSERKER){
 			berserk = Buff.affect(this, Berserk.class);
 			dmg = berserk.damageFactor(dmg);

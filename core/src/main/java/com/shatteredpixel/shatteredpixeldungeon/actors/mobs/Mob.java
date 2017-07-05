@@ -455,12 +455,7 @@ public abstract class Mob extends Char {
 	@Override
 	public int defenseProc( Char enemy, int damage ) {
 		if (!enemySeen && enemy == Dungeon.hero && Dungeon.hero.canSurpriseAttack()) {
-			if (((Hero)enemy).subClass == HeroSubClass.ASSASSIN) {
-				damage *= 1.25f;
-				Wound.hit(this);
-			} else {
-				Surprise.hit(this);
-			}
+            Surprise.hit(this);
 		}
 
 		//become aggro'd by a corrupted enemy
