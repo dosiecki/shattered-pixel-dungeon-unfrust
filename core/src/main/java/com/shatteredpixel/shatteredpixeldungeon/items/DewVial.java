@@ -87,7 +87,7 @@ public class DewVial extends Item {
 
 			if (volume > 0) {
 
-				int value = 1 + (Dungeon.depth - 1) / 5;
+				int value = 1 + (Dungeon.depth - 1) / 3;
 				if (hero.heroClass == HeroClass.HUNTRESS) {
 					value++;
 				}
