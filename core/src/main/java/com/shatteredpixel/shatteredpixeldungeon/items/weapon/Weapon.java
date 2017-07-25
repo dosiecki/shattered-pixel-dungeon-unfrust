@@ -147,6 +147,9 @@ abstract public class Weapon extends KindOfWeapon {
 		
 		if (this instanceof MissileWeapon) {
 			int bonus = RingOfSharpshooting.getBonus(hero, RingOfSharpshooting.Aim.class);
+            if (hero.heroClass == HeroClass.HUNTRESS) {
+                bonus += 1;
+            }
 			ACC *= (float)(Math.pow(1.2, bonus));
 		}
 
@@ -157,18 +160,16 @@ abstract public class Weapon extends KindOfWeapon {
 	public float speedFactor( Hero hero ) {
 
 		int encumrance = STRReq() - hero.STR();
+		int bonus = RingOfFuror.getBonus(hero, RingOfFuror.Furor.class);
 		if (this instanceof MissileWeapon && hero.heroClass == HeroClass.HUNTRESS) {
 			encumrance -= 2;
+            bonus += 1;
 		}
 
 		float DLY = imbue.delayFactor(this.DLY);
-
-		int bonus = RingOfFuror.getBonus(hero, RingOfFuror.Furor.class);
-
 		DLY = (float)(0.2 + (DLY - 0.2)*Math.pow(0.85, bonus));
 
-		return
-				(encumrance > 0 ? (float)(DLY * Math.pow( 1.2, encumrance )) : DLY);
+		return (encumrance > 0 ? (float)(DLY * Math.pow( 1.2, encumrance )) : DLY);
 	}
 
 	@Override
